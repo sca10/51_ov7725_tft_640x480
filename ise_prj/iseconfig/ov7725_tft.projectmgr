@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="ov7725_tft" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/axi_ddr_top G:|Desktop|ddr_old|52_ov7725_tft_320X240|rtl|ddr3|axi_ddr3_rw|axi_ddr_top.v/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/axi_ddr_top G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ddr3|axi_ddr3_rw|axi_ddr_top.v/axi_ctrl_inst - axi_ctrl</ClosedNode>
+         <ClosedNode>/axi_ddr_top G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ddr3|axi_ddr3_rw|axi_ddr_top.v/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|Desktop|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - ddr_rw</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|Desktop|OjbK|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - ddr_rw</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|FPGA|s6word|60|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|FPGA|s6word|60|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ov7725_top_inst - ov7725_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|FPGA|xilinx|camera_disp_ddr3|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - ddr_rw</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|FPGA|xilinx|camera_disp_ddr3|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ov7725_top_inst - ov7725_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 D:|FPGA|xilinx|camera_disp_ddr3|54_ov5640_tft_320X240|rtl|ov7725_tft_320X240.v</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|Pro_S6_code|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|ddr_new|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/axi_ctrl_inst - axi_ctrl</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|ddr_new|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|ddr_new|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/u_axi_ddr - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|ddr_new|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/u_axi_ddr - axi_ddr_top/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|ddr_old|52_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/u_axi_ddr - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/axi_ctrl_inst - axi_ctrl</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_320X240|rtl|ov7725_tft_320X240.v/ov7725_top_inst - ov7725_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/axi_ctrl_inst - axi_ctrl</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ov7725_tft_320X240.v/ddr_rw_inst - axi_ddr_top/u_axi_ddr - axi_ddr</ClosedNode>
+         <ClosedNode>/ov7725_tft_320x240 G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ov7725_tft_320X240.v/ov7725_top_inst - ov7725_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_640x480 D:|myapp|FPGA|pro|1_ebf_xc6slx16_pro_tutorial_code_20220302|51_ov7725_tft|51_ov7725_tft_640x480|rtl|ov7725_tft_640x480.v/ddr_rw_inst - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_640x480 D:|myapp|FPGA|pro|1_ebf_xc6slx16_pro_tutorial_code_20220302|51_ov7725_tft|51_ov7725_tft_640x480|rtl|ov7725_tft_640x480.v/ov7725_top_inst - ov7725_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_640x480 G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ov7725_tft_640x480.v/ddr_rw_inst - axi_ddr_top</ClosedNode>
+         <ClosedNode>/ov7725_tft_640x480 G:|Desktop|tft5.7|51_ov7725_tft_640x480|rtl|ov7725_tft_640x480.v/ov7725_top_inst - ov7725_top</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ov7725_tft_640x480 (D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft_640x480.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002a4000000020000000000000000000000000200000064ffffffff000000810000000300000002000002a40000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>ov7725_tft_640x480 (D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft_640x480.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Manage Configuration Project (iMPACT)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000183000000010000000100000000000000000000000064ffffffff000000810000000000000001000001830000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Manage Configuration Project (iMPACT)</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000b80000000100000000000000c00000000100000000000000780000000100000000000001a20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>axic_register_slice.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000121000000010001000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001140000011101000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000194000000010000000100000000000000000000000064ffffffff000000810000000000000001000001940000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000194000000010000000100000000000000000000000064ffffffff000000810000000000000001000001940000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

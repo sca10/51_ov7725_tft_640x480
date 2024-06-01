@@ -1,0 +1,283 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Oct 15 11:22:03 2020
+# Process ID: 9832
+# Log file: D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/planAhead_run_1/planAhead.log
+# Journal file: D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-81] Feature available: PartialReconfiguration
+source D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/pa.fromHdl.tcl
+# create_project -name ov7725_tft -dir "D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/planAhead_run_1" -part xc6slx16csg324-2
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr.ucf" [current_fileset -constrset]
+Adding file 'D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/carry_latch_or.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/carry_and.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/iodrp_mcb_controller.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/iodrp_controller.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/comparator_sel_static.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/comparator_sel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/comparator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/command_fifo.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/carry_or.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/carry_latch_and.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_wrap_cmd.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_incr_cmd.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axic_register_slice.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/w_upsizer.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/r_upsizer.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/a_upsizer.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_register_slice.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_simple_fifo.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_translator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_fsm.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration_top.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_upsizer.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_w_channel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_r_channel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_arbiter.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_b_channel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_aw_channel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb_ar_channel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/mcb_raw_wrapper.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/mcb_ui_top_synch.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi/axi_mcb.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/mcb_controller/mcb_ui_top.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr_fifo/wr_fifo.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# add_files [list {../rtl/ddr3/axi_ddr_fifo/wr_fifo.ngc}]
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr_fifo/rd_fifo.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# add_files [list {../rtl/ddr3/axi_ddr_fifo/rd_fifo.ngc}]
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/memc_wrapper.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/infrastructure.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ov7725/ov7725_data.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ov7725/ov7725_cfg.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ov7725/i2c_ctrl.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3_rw/axi_master_write.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3_rw/axi_master_read.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3_rw/axi_ctrl.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3/axi_ddr.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/tft_ctrl.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ov7725/ov7725_top.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ddr3/axi_ddr3_rw/axi_ddr_top.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../rtl/ov7725_tft_320X240.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top ov7725_tft_320x240 $srcset
+# add_files [list {D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-2
+Using Verific elaboration
+Parsing VHDL file "D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/carry_latch_or.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/carry_and.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/iodrp_mcb_controller.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/iodrp_controller.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/comparator_sel_static.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/comparator_sel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/comparator.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/command_fifo.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/carry_or.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/carry_latch_and.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_wrap_cmd.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_incr_cmd.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axic_register_slice.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/w_upsizer.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/r_upsizer.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/a_upsizer.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_register_slice.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_simple_fifo.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_translator.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_fsm.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration_top.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_upsizer.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_w_channel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_r_channel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_arbiter.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_b_channel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_aw_channel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb_ar_channel.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/mcb_raw_wrapper.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/mcb_ui_top_synch.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi/axi_mcb.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/mcb_controller/mcb_ui_top.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr_fifo/wr_fifo.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr_fifo/rd_fifo.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/memc_wrapper.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/infrastructure.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ov7725/ov7725_data.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ov7725/ov7725_cfg.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ov7725/i2c_ctrl.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3_rw/axi_master_write.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3_rw/axi_master_read.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3_rw/axi_ctrl.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3/axi_ddr.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/tft_ctrl.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ov7725/ov7725_top.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr3_rw/axi_ddr_top.v" into library work
+Analyzing Verilog file "D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ov7725_tft_320X240.v" into library work
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design wr_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to wr_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file wr_fifo.edif ...
+ngc2edif: Total memory usage is 4318364 kilobytes
+
+Reading core file 'D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr_fifo/wr_fifo.ngc' for (cell view 'wr_fifo', library 'work', file 'wr_fifo.v')
+Parsing EDIF File [./.Xil/PlanAhead-9832-DESKTOP-6GABMIP/ngc2edif/wr_fifo.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-9832-DESKTOP-6GABMIP/ngc2edif/wr_fifo.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design rd_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to rd_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file rd_fifo.edif ...
+ngc2edif: Total memory usage is 4318364 kilobytes
+
+Reading core file 'D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr3/axi_ddr_fifo/rd_fifo.ngc' for (cell view 'rd_fifo', library 'work', file 'rd_fifo.v')
+Parsing EDIF File [./.Xil/PlanAhead-9832-DESKTOP-6GABMIP/ngc2edif/rd_fifo.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-9832-DESKTOP-6GABMIP/ngc2edif/rd_fifo.edif]
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/xilinx/ise/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[4] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[3] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[2] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[1] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[0] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+Parsing UCF File [D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr.ucf]
+Finished Parsing UCF File [D:/FPGA/s6word/60/51_ov7725_tft_320X240/rtl/ddr.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 42 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 18 instances
+  IOBUFDS => IOBUFDS (IBUFDS, OBUFTDS): 2 instances
+  LUT6_2 => LUT6_2 (LUT6, LUT5): 22 instances
+
+Phase 0 | Netlist Checksum: 1358f45c
+open_rtl_design: Time (s): elapsed = 00:00:11 . Memory (MB): peak = 689.793 ; gain = 195.402
+update_compile_order -fileset sim_1
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj\planAhead_pid9832.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Oct 15 11:27:00 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

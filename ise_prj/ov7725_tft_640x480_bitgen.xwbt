@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\myProject\FPGA\51_ov7725_tft_640x480\ise_prj\ov7725_tft_640x480.ncd
+OUTFILE=D:\myProject\FPGA\51_ov7725_tft_640x480\ise_prj\ov7725_tft_640x480.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=D:\myProject\FPGA\51_ov7725_tft_640x480\ise_prj
+LICENSE=WebPack
+USER_INFO=__0_0_0

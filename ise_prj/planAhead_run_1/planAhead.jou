@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Oct 15 11:22:03 2020
+# Process ID: 9832
+# Log file: D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/planAhead_run_1/planAhead.log
+# Journal file: D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/FPGA/s6word/60/51_ov7725_tft_320X240/ise_prj/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

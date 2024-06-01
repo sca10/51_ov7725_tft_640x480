@@ -1,0 +1,103 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\myapp\FPGA\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc
+D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2
+ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd
+
+Reading NGO file
+"D:/myProject/FPGA/51_ov7725_tft_640x480/ise_prj/ov7725_tft_640x480.ngc" ...
+Loading design module "../rtl/ddr3/axi_ddr_fifo/wr_fifo.ngc"...
+Loading design module "../rtl/ddr3/axi_ddr_fifo/rd_fifo.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT3: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_mcb_drp_clk_bufg_in =
+   PERIOD "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_mcb_drp_clk_bufg_in"
+   TS_sys_clk_pin * 3.125 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk_2x_180 = PERIOD
+   "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk_2x_180" TS_sys_clk_pin *
+   12.5 PHASE 0.8 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT5: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_use_clk2_bufg_in = PERIOD
+   "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_use_clk2_bufg_in"
+   TS_sys_clk_pin * 0.657894737 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk_2x_0 = PERIOD
+   "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk_2x_0" TS_sys_clk_pin *
+   12.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT4: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_use_clk1_bufg_in = PERIOD
+   "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_use_clk1_bufg_in"
+   TS_sys_clk_pin * 0.480769231 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/u_pll_adv. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC
+   TS_ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk0_bufg_in = PERIOD
+   "ddr_rw_inst_u_axi_ddr_memc3_infrastructure_inst_clk0_bufg_in" TS_sys_clk_pin
+   * 3.125 HIGH 50%>
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N385' has no driver
+WARNING:NgdBuild:452 - logical net 'N389' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   2
+
+Total memory usage is 4431732 kilobytes
+
+Writing NGD file "ov7725_tft_640x480.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "ov7725_tft_640x480.bld"...

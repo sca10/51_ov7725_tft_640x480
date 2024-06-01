@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/a_upsizer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_ar_channel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_aw_channel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_b_channel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_arbiter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_fsm.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_cmd_translator.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_incr_cmd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_r_channel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_simple_fifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_w_channel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_mcb_wrap_cmd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_register_slice.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axi_upsizer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/axic_register_slice.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/carry_and.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/carry_latch_and.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/carry_latch_or.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/carry_or.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/command_fifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/comparator.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/comparator_sel.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/comparator_sel_static.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/mcb_ui_top_synch.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/r_upsizer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi/w_upsizer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/axi_ddr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/iodrp_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/iodrp_mcb_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/mcb_raw_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/mcb_soft_calibration_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/mcb_controller/mcb_ui_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3/memc_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3_rw/axi_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3_rw/axi_ddr_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3_rw/axi_master_read.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr3_rw/axi_master_write.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr_fifo/rd_fifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ddr3/axi_ddr_fifo/wr_fifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725/i2c_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725/ov7725_cfg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725/ov7725_data.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725/ov7725_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft_640x480.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/tft_ctrl.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

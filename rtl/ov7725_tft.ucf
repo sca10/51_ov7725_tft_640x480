@@ -1,0 +1,136 @@
+#时钟
+NET sys_clk LOC = V10 | TNM_NET = sys_clk_pin | IOSTANDARD = "LVCMOS33";
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+
+#复位信号
+NET "sys_rst_n" LOC = R7 | IOSTANDARD = "LVCMOS33"; 
+
+#DDR 引脚约束
+CONFIG VCCAUX=3.3; # Valid values are 2.5 and 3.3         
+CONFIG MCB_PERFORMANCE= EXTENDED;
+NET "mcb3_dram_dq[*]"   IN_TERM = NONE;
+NET "mcb3_dram_dqs"     IN_TERM = NONE;
+NET "mcb3_dram_dqs_n"   IN_TERM = NONE;
+NET "mcb3_dram_udqs"    IN_TERM = NONE;
+NET "mcb3_dram_udqs_n"  IN_TERM = NONE;
+NET "mcb3_dram_reset_n" IOSTANDARD = LVCMOS15;
+NET "mcb3_dram_dq[*]"   IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_a[*]"    IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_ba[*]"   IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_cke"     IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_ras_n"   IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_cas_n"   IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_we_n"    IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_odt"     IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_dm"      IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_udm"     IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_rzq"          IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_zio"          IOSTANDARD = SSTL15_II  | OUT_TERM = UNTUNED_50;
+NET "mcb3_dram_dqs"     IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_udqs"    IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_dqs_n"   IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_udqs_n"  IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_ck"      IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_ck_n"    IOSTANDARD = DIFF_SSTL15_II | OUT_TERM=UNTUNED_50;
+NET "mcb3_dram_a[0]"                            LOC = "J7" ;
+NET "mcb3_dram_a[10]"                           LOC = "F4" ;
+NET "mcb3_dram_a[11]"                           LOC = "D3" ;
+NET "mcb3_dram_a[12]"                           LOC = "G6" ;
+NET "mcb3_dram_a[1]"                            LOC = "J6" ;
+NET "mcb3_dram_a[2]"                            LOC = "H5" ;
+NET "mcb3_dram_a[3]"                            LOC = "L7" ;
+NET "mcb3_dram_a[4]"                            LOC = "F3" ;
+NET "mcb3_dram_a[5]"                            LOC = "H4" ;
+NET "mcb3_dram_a[6]"                            LOC = "H3" ;
+NET "mcb3_dram_a[7]"                            LOC = "H6" ;
+NET "mcb3_dram_a[8]"                            LOC = "D2" ;
+NET "mcb3_dram_a[9]"                            LOC = "D1" ;
+NET "mcb3_dram_ba[0]"                           LOC = "F2" ;
+NET "mcb3_dram_ba[1]"                           LOC = "F1" ;
+NET "mcb3_dram_ba[2]"                           LOC = "E1" ;
+NET "mcb3_dram_cas_n"                           LOC = "K5" ;
+NET "mcb3_dram_ck"                              LOC = "G3" ;
+NET "mcb3_dram_ck_n"                            LOC = "G1" ;
+NET "mcb3_dram_cke"                             LOC = "H7" ;
+NET "mcb3_dram_dm"                              LOC = "K3" ;
+NET "mcb3_dram_dq[0]"                           LOC = "L2" ;
+NET "mcb3_dram_dq[10]"                          LOC = "N2" ;
+NET "mcb3_dram_dq[11]"                          LOC = "N1" ;
+NET "mcb3_dram_dq[12]"                          LOC = "T2" ;
+NET "mcb3_dram_dq[13]"                          LOC = "T1" ;
+NET "mcb3_dram_dq[14]"                          LOC = "U2" ;
+NET "mcb3_dram_dq[15]"                          LOC = "U1" ;
+NET "mcb3_dram_dq[1]"                           LOC = "L1" ;
+NET "mcb3_dram_dq[2]"                           LOC = "K2" ;
+NET "mcb3_dram_dq[3]"                           LOC = "K1" ;
+NET "mcb3_dram_dq[4]"                           LOC = "H2" ;
+NET "mcb3_dram_dq[5]"                           LOC = "H1" ;
+NET "mcb3_dram_dq[6]"                           LOC = "J3" ;
+NET "mcb3_dram_dq[7]"                           LOC = "J1" ;
+NET "mcb3_dram_dq[8]"                           LOC = "M3" ;
+NET "mcb3_dram_dq[9]"                           LOC = "M1" ;
+NET "mcb3_dram_dqs"                             LOC = "L4" ;
+NET "mcb3_dram_dqs_n"                           LOC = "L3" ;
+NET "mcb3_dram_odt"                             LOC = "K6" ;
+NET "mcb3_dram_ras_n"                           LOC = "L5" ;
+NET "mcb3_dram_reset_n"                         LOC = "E4" ;
+NET "mcb3_dram_udm"                             LOC = "K4" ;
+NET "mcb3_dram_udqs"                            LOC = "P2" ;
+NET "mcb3_dram_udqs_n"                          LOC = "P1" ;
+NET "mcb3_dram_we_n"                            LOC = "E3" ;
+NET "mcb3_rzq"                                  LOC = "C2" ;
+NET "mcb3_zio"                                  LOC = "L6" ;
+
+#tft引脚定义
+NET tft_rgb<0>          LOC = B6  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<1>          LOC = E6  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<2>          LOC = F7  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<3>          LOC = A5  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<4>          LOC = C5  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<5>          LOC = D8  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<6>          LOC = A7  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<7>          LOC = C7  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<8>          LOC = E8  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<9>          LOC = E7  | IOSTANDARD = "LVCMOS33";        
+NET tft_rgb<10>         LOC = A6  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<11>         LOC = A8  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<12>         LOC = B8  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<13>         LOC = F8  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<14>         LOC = G8  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<15>         LOC = C8  | IOSTANDARD = "LVCMOS33";       
+NET tft_rgb<16>         LOC = D9  | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<17>         LOC = C9  | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<18>         LOC = B9  | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<19>         LOC = A9  | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<20>         LOC = D11 | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<21>         LOC = C11 | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<22>         LOC = C10 | IOSTANDARD = "LVCMOS33";
+NET tft_rgb<23>         LOC = A10 | IOSTANDARD = "LVCMOS33";
+NET tft_clk             LOC = A4 | IOSTANDARD = "LVCMOS33";        
+NET tft_de              LOC = B3 | IOSTANDARD = "LVCMOS33";        
+NET tft_vs              LOC = A3 | IOSTANDARD = "LVCMOS33";        
+NET tft_hs              LOC = B4 | IOSTANDARD = "LVCMOS33";        
+NET tft_bl              LOC = C6 | IOSTANDARD = "LVCMOS33";
+PIN "ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/U_BUFG_CLK3.O"
+   CLOCK_DEDICATED_ROUTE = FALSE;
+
+#ov7725摄像头接口 
+#NET camera_xclk    LOC = H12  | IOSTANDARD = "LVCMOS33"; #8 - XCLK
+NET ov7725_pclk     LOC = N11 | IOSTANDARD = "LVCMOS33"; #7 - PCLK     
+NET ov7725_pwdn     LOC = J16 | IOSTANDARD = "LVCMOS33"; #18 - PWND 
+NET ov7725_rst_n    LOC = U11 | IOSTANDARD = "LVCMOS33"; #17 - RESET 
+NET ov7725_vsync    LOC = U15 | IOSTANDARD = "LVCMOS33"; #16 - VSYNC
+NET ov7725_href     LOC = K16 | IOSTANDARD = "LVCMOS33"; #15 - HREF
+NET ov7725_data[7]  LOC = P12 | IOSTANDARD = "LVCMOS33"; #D7 
+NET ov7725_data[6]  LOC = F16 | IOSTANDARD = "LVCMOS33"; #D6 
+NET ov7725_data[5]  LOC = T8 | IOSTANDARD = "LVCMOS33"; #D5 
+NET ov7725_data[4]  LOC = G14 | IOSTANDARD = "LVCMOS33"; #D4
+NET ov7725_data[3]  LOC = R11 | IOSTANDARD = "LVCMOS33"; #D3
+NET ov7725_data[2]  LOC = U16 | IOSTANDARD = "LVCMOS33"; #D2 
+NET ov7725_data[1]  LOC = C18 | IOSTANDARD = "LVCMOS33"; #D1 
+NET ov7725_data[0]  LOC = H17 | IOSTANDARD = "LVCMOS33"; #D0
+NET "ov7725_pclk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#sccb IIC引脚定义
+NET sccb_scl      LOC = M8 | IOSTANDARD = "LVCMOS33";  #SIO_C   
+NET sccb_sda      LOC = L15 | IOSTANDARD = "LVCMOS33";  #SIO_D  

@@ -1,0 +1,13 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sat Jun 01 20:51:20 2024
+
+drc -z ov7725_tft_640x480.ncd ov7725_tft_640x480.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ov7725_top_inst/i2c_ctrl_inst/state[3]_PWR_4_o_Mux_91_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

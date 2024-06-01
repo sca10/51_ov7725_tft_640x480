@@ -1,0 +1,2118 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'ov7725_tft_640x480'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ngd
+ov7725_tft_640x480.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat Jun 01 20:50:21 2024
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    5
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,549 out of  18,224    8%
+    Number used as Flip Flops:               1,532
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               16
+  Number of Slice LUTs:                      1,844 out of   9,112   20%
+    Number used as logic:                    1,698 out of   9,112   18%
+      Number using O6 output only:           1,173
+      Number using O5 output only:              87
+      Number using O5 and O6:                  438
+      Number used as ROM:                        0
+    Number used as Memory:                      57 out of   2,176    2%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            57
+        Number using O6 output only:            55
+        Number using O5 output only:             0
+        Number using O5 and O6:                  2
+    Number used exclusively as route-thrus:     89
+      Number with same-slice register load:     80
+      Number with same-slice carry load:         9
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   749 out of   2,278   32%
+  Number of MUXCYs used:                       424 out of   4,556    9%
+  Number of LUT Flip Flop pairs used:        2,120
+    Number with an unused Flip Flop:           761 out of   2,120   35%
+    Number with an unused LUT:                 276 out of   2,120   13%
+    Number of fully used LUT-FF pairs:       1,083 out of   2,120   51%
+    Number of unique control sets:             108
+    Number of slice register sites lost
+      to control set restrictions:             440 out of  18,224    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        94 out of     232   40%
+    Number of LOCed IOBs:                       94 out of      94  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of      32   25%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       6 out of      16   37%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        24 out of     248    9%
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      2
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  46 out of     248   18%
+    Number used as OLOGIC2s:                     0
+    Number used as OSERDES2s:                   46
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         1 out of       4   25%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                1 out of       2   50%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.75
+
+Peak Memory Usage:  4626 MB
+Total REAL time to MAP completion:  33 secs 
+Total CPU time to MAP completion:   25 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/U_BUFG_CLK3>, driving the
+   net, <clk_33m>, that is driving the following (first 30) non-clock load pins
+   off chip.
+   < PIN: tft_clk.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN
+   <ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/U_BUFG_CLK3.O> allowing your
+   design to continue. This constraint disables all clock placer rules related
+   to the specified COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance,
+   <ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/U_BUFG_CLK3>, driving the
+   net, <clk_33m>, that is driving the following (first 30) non-clock load pins.
+   < PIN: tft_clk.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <ddr_rw_inst/u_axi_ddr/memc3_infrastructure_inst/U_BUFG_CLK3.O> allowing your
+   design to continue. This constraint disables all clock placer rules related
+   to the specified COMP.PIN.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <ov7725_pclk> is placed at site <N11>. The corresponding BUFG
+   component <ov7725_pclk_BUFGP/BUFG> is placed at site <BUFGMUX_X2Y12>. There
+   is only a select set of IOBs that can use the fast path to the Clocker
+   buffer, and they are not being used. You may want to analyze why this problem
+   exists and correct it. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <ov7725_pclk.PAD>
+   allowing your design to continue. This constraint disables all clock placer
+   rules related to the specified COMP.PIN. The use of this override is highly
+   discouraged as it may lead to very poor timing results. It is recommended
+   that this error condition be corrected in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ov7725_top_inst/i2c_ctrl_inst/state[3]_PWR_4_o_Mux_91_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /axi_register_slice_d1/reset has no load.
+INFO:LIT:395 - The above info message is repeated 41 more times for the
+   following (max. 5 shown):
+   N385,
+   N389,
+   ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf
+   .rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>,
+   ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf
+   .rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>,
+   ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf
+   .rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 224 block(s) removed
+   8 block(s) optimized away
+ 208 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/a
+xi_register_slice_d1/reset" is loadless and has been removed.
+ Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/a
+xi_register_slice_d1/reset" (SFF) removed.
+Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[5].gms.ms" (MUX) removed.
+ The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<4>" is loadless and
+has been removed.
+  Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[4].gms.ms" (MUX) removed.
+   The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<3>" is loadless and
+has been removed.
+    Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[3].gms.ms" (MUX) removed.
+     The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<2>" is loadless and
+has been removed.
+      Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[2].gms.ms" (MUX) removed.
+       The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<1>" is loadless and
+has been removed.
+        Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[1].gms.ms" (MUX) removed.
+         The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<0>" is loadless and
+has been removed.
+          Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[0].gm1.m1" (MUX) removed.
+           The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<0>" is loadless and has been
+removed.
+            Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<0>1" (ROM) removed.
+         The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<1>" is loadless and has been
+removed.
+          Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<1>1" (ROM) removed.
+       The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<2>" is loadless and has been
+removed.
+        Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<2>1" (ROM) removed.
+     The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<3>" is loadless and has been
+removed.
+      Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<3>1" (ROM) removed.
+   The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<4>" is loadless and has been
+removed.
+    Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<4>1" (ROM) removed.
+ The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<5>" is loadless and has been
+removed.
+  Loadless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<5>1" (ROM) removed.
+Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[4].gms.ms" (MUX) removed.
+ The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<3>" is loadless and
+has been removed.
+  Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[3].gms.ms" (MUX) removed.
+   The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<2>" is loadless and
+has been removed.
+    Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[2].gms.ms" (MUX) removed.
+     The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<1>" is loadless and
+has been removed.
+      Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[1].gms.ms" (MUX) removed.
+       The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.carrynet<0>" is loadless and
+has been removed.
+        Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/gmux.gm[0].gm1.m1" (MUX) removed.
+         The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<0>" is loadless and has been
+removed.
+          Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<0>1" (ROM) removed.
+       The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<1>" is loadless and has been
+removed.
+        Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<1>1" (ROM) removed.
+     The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<2>" is loadless and has been
+removed.
+      Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<2>1" (ROM) removed.
+   The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<3>" is loadless and has been
+removed.
+    Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<3>1" (ROM) removed.
+ The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<4>" is loadless and has been
+removed.
+  Loadless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.c2/v1<4>1" (ROM) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_ADJUST[7
+].and_inst" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[0].
+xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[1].
+xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[2].
+xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_MAS
+K[2].and_inst4" (MUX) removed.
+ The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_fo
+r_mask_dummy_carry3<2>" is loadless and has been removed.
+  Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_MAS
+K[2].and_inst3" (MUX) removed.
+   The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_fo
+r_mask_dummy_carry2<2>" is loadless and has been removed.
+    Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_MAS
+K[2].and_inst2" (MUX) removed.
+     The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_fo
+r_mask_dummy_carry1<2>" is loadless and has been removed.
+      Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_MAS
+K[2].and_inst1" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_data_inst/USE_FPGA_LENGTH.BIT_LANE[7].and_in
+st" (MUX) removed.
+ The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_data_inst/USE_FPGA_LENGTH.length_di<7>" is
+loadless and has been removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_data_inst/USE_FPGA_NEXT_WORD.LUT_LEVEL[2].ne
+xt_carry_inst" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_ADJUST
+[7].and_inst" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[0
+].xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[1
+].xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST[2
+].xorcy_inst" (XOR) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_M
+ASK[2].and_inst4" (MUX) removed.
+ The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_
+for_mask_dummy_carry3<2>" is loadless and has been removed.
+  Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_M
+ASK[2].and_inst3" (MUX) removed.
+   The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_
+for_mask_dummy_carry2<2>" is loadless and has been removed.
+    Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_M
+ASK[2].and_inst2" (MUX) removed.
+     The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.last_word_
+for_mask_dummy_carry1<2>" is loadless and has been removed.
+      Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_FPGA_ADJUSTED_LEN.LUT_LAST_M
+ASK[2].and_inst1" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_data_inst/USE_FPGA_LENGTH.BIT_LANE[7].carr
+y_inst" (MUX) removed.
+ The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_data_inst/USE_FPGA_LENGTH.length_di<7>" is
+loadless and has been removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_data_inst/USE_FPGA_NEXT_WORD.LUT_LEVEL[2].
+next_carry_inst" (MUX) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_data_inst/USE_FPGA_WORD_COMPLETED.word_com
+plete_next_wrap_stall_inst/USE_FPGA.and2b1l_inst" (AND2B1L) removed.
+Loadless block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_data_inst/USE_FPGA_WORD_COMPLETED.word_com
+plete_rest_stall_inst/USE_FPGA.and2b1l_inst" (AND2B1L) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<11>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<10>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<9>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<8>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<7>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<6>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<5>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<4>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<3>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<2>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<1>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<0>" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i" is sourceless and has
+been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<6>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<5>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<4>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<3>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<2>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<1>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_246_o_GND_246_o_sub_2_OUT<0>" is
+sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/going_aempty_fwft_leaving_aempty_fwft_OR_10
+_o" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb" is sourceless and has been
+removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/going_aempty_fwft_leaving_aempty_fwft_OR_10
+_o1" (ROM) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/_n0026_inv" is sourceless and has been
+removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i_GND_252_o_MUX_96_o" is
+sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<4>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[5].gms.ms" (MUX) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.comp3" is sourceless and has been
+removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_ram_almost_full_i_GND_252_o_MUX_96_o11
+" (ROM) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<5>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<3>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[4].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<4>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<2>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[3].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<3>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<1>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[2].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<2>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<0>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[1].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<1>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<0>" is sourceless and has been
+removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[0].gm1.m1" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<10>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<11>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<11>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_11" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<11>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<9>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<10>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<10>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_10" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<10>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<10>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<8>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<9>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<9>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_9" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<9>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<9>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<7>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<8>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<8>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_8" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<8>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<8>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<6>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<7>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<7>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_7" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<7>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<7>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<5>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<6>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<6>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_6" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<6>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<6>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<4>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<5>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<5>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_5" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<5>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<5>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<3>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<4>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<4>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_4" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<4>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<4>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<2>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<3>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<3>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_3" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<3>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<3>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<2>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_xor<2>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_261_o_GND_261_o_sub_3_OUT<2>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_2" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_cy<2>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/WR_PNTR[1]_WR_PNTR[2]_XOR_10_o" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<1>" is sourceless and
+has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/D<1>" is sourceless and
+has been removed.
+     Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg<1>" is sourceless
+and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/WR_PNTR[0]_WR_PNTR[1]_XOR_11_o" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<0>" is sourceless and
+has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/D<0>" is sourceless and
+has been removed.
+     Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg<0>" is sourceless
+and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<11>" is sourceless and has
+been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<10>" is sourceless and has
+been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<9>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i" is sourceless and has
+been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<10>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<11>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<11>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_11" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<11>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<9>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<10>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<10>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_10" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<10>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<10>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<8>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<9>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<9>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_9" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<9>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<9>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<7>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<8>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<8>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<8>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<8>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<6>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<7>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<7>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<7>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<7>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<5>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<6>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<6>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<6>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<6>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<4>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<5>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<5>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<5>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<5>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<3>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<4>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<4>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<4>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<4>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<2>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<3>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<3>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<3>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<3>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<1>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<2>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<2>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<2>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<2>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<0>" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<1>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<1>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<1>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<1>" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<0>1" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_xor<0>" (XOR) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_247_o_GND_247_o_sub_3_OUT<0>" is
+sourceless and has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_cy<0>" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/going_aempty_fwft_leaving_aempty_fwft_OR_10
+_o" is sourceless and has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_i" (FF) removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/aempty_fwft_fb" is sourceless and has been
+removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/going_aempty_fwft_leaving_aempty_fwft_OR_10
+_o1" (ROM) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/_n0021_inv" is sourceless and has been
+removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i" (FF) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_almost_full_i_GND_253_o_MUX_48_o" is
+sourceless and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<3>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[4].gms.ms" (MUX) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.comp3" is sourceless and has been
+removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_ram_almost_full_i_GND_253_o_MUX_48_o11
+" (ROM) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<4>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<2>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[3].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<3>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<1>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[2].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<2>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.carrynet<0>" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[1].gms.ms" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<1>" is sourceless and has been
+removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<0>" is sourceless and has been
+removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/gmux.gm[0].gm1.m1" (MUX) removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/RD_PNTR[1]_RD_PNTR[2]_XOR_64_o" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<1>" is sourceless and
+has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1" (FF) removed.
+    The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/D<1>" is sourceless and
+has been removed.
+     Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_1" (FF) removed.
+      The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<1>" is sourceless
+and has been removed.
+The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/RD_PNTR[0]_RD_PNTR[1]_XOR_65_o" is sourceless and
+has been removed.
+ Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0" (FF) removed.
+  The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<0>" is sourceless and
+has been removed.
+   Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0" (FF) removed.
+    The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/D<0>" is sourceless and
+has been removed.
+     Sourceless block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_0" (FF) removed.
+      The signal
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<0>" is sourceless
+and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.wr_cmd_offset<2>" is unused and has been
+removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[17].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<17>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF
+_OUT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB91" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<17
+>" is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.wr_cmd_offset<1>" is unused and has been
+removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[16].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<16>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF
+_OUT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB81" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<16
+>" is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.wr_cmd_offset<0>" is unused and has been
+removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[15].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<15>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF
+_OUT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB71" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<15
+>" is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.wr_cmd_step<3>" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[11].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.
+USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<11>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF
+_OUT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB32" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<11
+>" is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.rd_cmd_offset<2>" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.DATA_GEN[17].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<17>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF_O
+UT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB91" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<17>"
+is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.rd_cmd_offset<1>" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.DATA_GEN[16].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<16>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF_O
+UT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB81" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<16>"
+is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.rd_cmd_offset<0>" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.DATA_GEN[15].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<15>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF_O
+UT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB71" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<15>"
+is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.rd_cmd_step<3>" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.DATA_GEN[11].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<11>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF_O
+UT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB31" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<11>"
+is unused and has been removed.
+The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.rd_cmd_modified" is unused and has been removed.
+ Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.DATA_GEN[29].FDRE_inst" (SFF) removed.
+  The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.US
+E_FPGA_OUTPUT_PIPELINE.M_MESG_CMB<29>" is unused and has been removed.
+   Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/Mmux_USE_FF_O
+UT.USE_FPGA_OUTPUT_PIPELINE.M_MESG_CMB221" (ROM) removed.
+    The signal
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/M_MESG_I<29>"
+is unused and has been removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/Mxor_RD_PNTR[0]_RD_PNTR[1]_XOR_65_o_xo<0>1" (ROM)
+removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/Mxor_RD_PNTR[1]_RD_PNTR[2]_XOR_64_o_xo<0>1" (ROM)
+removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<0>1_INV_0" (BUF) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<10>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<11>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<1>_INV_0" (BUF) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<2>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<3>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<4>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<5>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<6>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<7>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<8>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_247_o_GND_247_o_sub_3_OUT<11:
+0>_lut<9>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/_n0021_inv1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<0>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<1>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<2>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<3>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<4>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/Mxor_WR_PNTR[0]_WR_PNTR[1]_XOR_11_o_xo<0>1" (ROM)
+removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gcx.clkx/Mxor_WR_PNTR[1]_WR_PNTR[2]_XOR_10_o_xo<0>1" (ROM)
+removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<0>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<1>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<2>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<3>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<4>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<5>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_246_o_GND_246_o_sub_2_OUT<9:0
+>_xor<6>" (XOR) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<10>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<11>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<2>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<3>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<4>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<5>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<6>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<7>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<8>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_261_o_GND_261_o_sub_3_OUT<11:
+0>_lut<9>" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_0" (FF) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_1" (FF) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/_n0026_inv1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<0>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<1>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<2>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<3>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<4>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.r
+f/gntv_or_sync_fifo.gl0.wr/gwas.wsts/gaf.c3/v1<5>1" (ROM) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FIFO
+.DATA_GEN[11].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FIFO
+.DATA_GEN[15].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FIFO
+.DATA_GEN[16].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FIFO
+.DATA_GEN[17].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FIFO
+.DATA_GEN[29].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FI
+FO.DATA_GEN[11].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FI
+FO.DATA_GEN[15].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FI
+FO.DATA_GEN[16].USE_32.SRLC32E_inst" (SRLC32E) removed.
+Unused block
+"ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb/U
+SE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FPGA_FI
+FO.DATA_GEN[17].USE_32.SRLC32E_inst" (SRLC32E) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND
+		ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.
+rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/
+valid.cstr/XST_GND
+GND 		ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/XST_GND
+VCC 		ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/XST_VCC
+GND
+		ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.
+rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/
+valid.cstr/XST_GND
+GND 		ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/XST_GND
+VCC 		ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 3
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | SETUP       |    -0.754ns|    12.432ns|       1|         754
+  ture_inst_mcb_drp_clk_bufg_in = PERIOD TI | HOLD        |     0.060ns|            |       0|           0
+  MEGRP "ddr_rw_inst_u_axi_ddr_memc3_infras |             |            |            |        |            
+  tructure_inst_mcb_drp_clk_bufg_in" TS_sys |             |            |            |        |            
+  _clk_pin * 3.125 HIGH 50%                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | MINPERIOD   |     0.101ns|     1.499ns|       0|           0
+  ture_inst_clk_2x_180 = PERIOD TIMEGRP "dd |             |            |            |        |            
+  r_rw_inst_u_axi_ddr_memc3_infrastructure_ |             |            |            |        |            
+  inst_clk_2x_180" TS_sys_clk_pin * 12.5 PH |             |            |            |        |            
+  ASE 0.8 ns HIGH 50%                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | MINPERIOD   |     0.101ns|     1.499ns|       0|           0
+  ture_inst_clk_2x_0 = PERIOD TIMEGRP "ddr_ |             |            |            |        |            
+  rw_inst_u_axi_ddr_memc3_infrastructure_in |             |            |            |        |            
+  st_clk_2x_0" TS_sys_clk_pin * 12.5 HIGH 5 |             |            |            |        |            
+  0%                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | SETUP       |     0.364ns|    23.478ns|       0|           0
+  ture_inst_use_clk2_bufg_in = PERIOD TIMEG | HOLD        |     0.132ns|            |       0|           0
+  RP "ddr_rw_inst_u_axi_ddr_memc3_infrastru |             |            |            |        |            
+  cture_inst_use_clk2_bufg_in" TS_sys_clk_p |             |            |            |        |            
+  in * 0.657894737 HIGH 50%                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
+  pin" 50 MHz HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | SETUP       |     0.672ns|     3.712ns|       0|           0
+  ture_inst_clk0_bufg_in = PERIOD TIMEGRP " | HOLD        |     0.006ns|            |       0|           0
+  ddr_rw_inst_u_axi_ddr_memc3_infrastructur |             |            |            |        |            
+  e_inst_clk0_bufg_in" TS_sys_clk_pin * 3.1 |             |            |            |        |            
+  25 HIGH 50%                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ddr_rw_inst_u_axi_ddr_memc3_infrastruc | SETUP       |     1.826ns|    17.854ns|       0|           0
+  ture_inst_use_clk1_bufg_in = PERIOD TIMEG | HOLD        |     0.413ns|            |       0|           0
+  RP "ddr_rw_inst_u_axi_ddr_memc3_infrastru |             |            |            |        |            
+  cture_inst_use_clk1_bufg_in" TS_sys_clk_p |             |            |            |        |            
+  in * 0.480769231 HIGH 50%                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     38.850ns|            0|            1|            0|        63356|
+| TS_ddr_rw_inst_u_axi_ddr_memc3|     30.400ns|     23.478ns|          N/A|            0|            0|         4211|            0|
+| _infrastructure_inst_use_clk2_|             |             |             |             |             |             |             |
+| bufg_in                       |             |             |             |             |             |             |             |
+| TS_ddr_rw_inst_u_axi_ddr_memc3|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| _infrastructure_inst_clk_2x_18|             |             |             |             |             |             |             |
+| 0                             |             |             |             |             |             |             |             |
+| TS_ddr_rw_inst_u_axi_ddr_memc3|      6.400ns|     12.432ns|          N/A|            1|            0|        26290|            0|
+| _infrastructure_inst_mcb_drp_c|             |             |             |             |             |             |             |
+| lk_bufg_in                    |             |             |             |             |             |             |             |
+| TS_ddr_rw_inst_u_axi_ddr_memc3|      6.400ns|      3.712ns|          N/A|            0|            0|        32449|            0|
+| _infrastructure_inst_clk0_bufg|             |             |             |             |             |             |             |
+| _in                           |             |             |             |             |             |             |             |
+| TS_ddr_rw_inst_u_axi_ddr_memc3|     41.600ns|     17.854ns|          N/A|            0|            0|          406|            0|
+| _infrastructure_inst_use_clk1_|             |             |             |             |             |             |             |
+| bufg_in                       |             |             |             |             |             |             |             |
+| TS_ddr_rw_inst_u_axi_ddr_memc3|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| _infrastructure_inst_clk_2x_0 |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| mcb3_dram_a<0>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<1>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<2>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<3>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<4>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<5>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<6>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<7>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<8>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<9>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<10>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<11>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<12>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<0>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<1>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<2>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cas_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck                       | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck_n                     | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cke                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_dm                       | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<0>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<1>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<2>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<3>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<4>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<5>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<6>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<7>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<8>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<9>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<10>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<11>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<12>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<13>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<14>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<15>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dqs                      | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_dqs_n                    | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_odt                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ras_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_reset_n                  | IOB              | OUTPUT    | LVCMOS15             |       | 12       | SLOW | OSERDES      |          |          |
+| mcb3_dram_udm                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_udqs                     | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_udqs_n                   | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_we_n                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_rzq                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| mcb3_zio                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| ov7725_data<0>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<1>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<2>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<3>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<4>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<5>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<6>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_data<7>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_href                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_pclk                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ov7725_pwdn                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ov7725_rst_n                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ov7725_vsync                       | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sccb_scl                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sccb_sda                           | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sys_clk                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sys_rst_n                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| tft_bl                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_clk                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_de                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_hs                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<8>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<9>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<10>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<11>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<12>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<13>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<14>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<15>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<16>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<17>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<18>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<19>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<20>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<21>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<22>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_rgb<23>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| tft_vs                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

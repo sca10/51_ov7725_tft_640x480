@@ -1,0 +1,108 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design wr_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to wr_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file wr_fifo.edif ...
+ngc2edif: Total memory usage is 4318364 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design rd_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to rd_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file rd_fifo.edif ...
+ngc2edif: Total memory usage is 4318364 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ov7725_tft_640x480.ngc ...
+WARNING:NetListWriters:298 - No output is written to ov7725_tft_640x480.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/axi_ctrl_inst/Mcompar_wr_e_addr[30]_wr_burst_addr_reg[31]_LessTha
+   n_21_o_lut[3 : 0] on block ov7725_tft_640x480 is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /USE_UPSIZER.upsizer_d2/mi_register_slice_inst/r_pipe/storage_data1[66 : 0]
+   on block ov7725_tft_640x480 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /axi_register_slice_d3/ar_pipe/storage_data1[56 : 28] on block
+   ov7725_tft_640x480 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /READ_BUNDLE.axi_mcb_r_channel_0/trans_out[9 : 0] on block ov7725_tft_640x480
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /USE_UPSIZER.upsizer_d2/mi_register_slice_inst/r_pipe/S_PAYLOAD_DATA[70]_stor
+   age_data2[70]_mux_3_OUT[66 : 0] on block ov7725_tft_640x480 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/P0_UI_AXI.p0_axi_mcb
+   /USE_UPSIZER.upsizer_d2/mi_register_slice_inst/r_pipe/storage_data2[66 : 0]
+   on block ov7725_tft_640x480 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst
+   /gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/_n210
+   3[8 : 1] on block ov7725_tft_640x480 is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst
+   /gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/IODRP
+   CTRLR_MEMCELL_ADDR[7 : 0] on block ov7725_tft_640x480 is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst
+   /gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp
+   _controller/memcell_addr_reg[7 : 0] on block ov7725_tft_640x480 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/u_axi_ddr/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst
+   /gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp
+   _mcb_controller/memcell_addr_reg[7 : 0] on block ov7725_tft_640x480 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ddr_rw_inst/axi_master_write_inst/Mmux_wr_state[2]_reg_w_len[7]_wide_mux_29_O
+   UT_rs_cy[5 : 0] on block ov7725_tft_640x480 is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ov7725_tft_640x480.edif ...
+ngc2edif: Total memory usage is 86384 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design wr_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to wr_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file wr_fifo.edif ...
+ngc2edif: Total memory usage is 82356 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design rd_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to rd_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file rd_fifo.edif ...
+ngc2edif: Total memory usage is 81972 kilobytes
+

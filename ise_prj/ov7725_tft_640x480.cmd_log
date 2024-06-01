@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "G:/Desktop/tft5.7/51_ov7725_tft_640x480/ise_prj/ov7725_tft_640x480.xst" -ofn "G:/Desktop/tft5.7/51_ov7725_tft_640x480/ise_prj/ov7725_tft_640x480.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc G:/Desktop/tft5.7/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2 ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ngd ov7725_tft_640x480.pcf 
+par -w -intstyle ise -ol high -mt off ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ncd ov7725_tft_640x480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov7725_tft_640x480.twx ov7725_tft_640x480.ncd -o ov7725_tft_640x480.twr ov7725_tft_640x480.pcf 
+bitgen -intstyle ise -f ov7725_tft_640x480.ut ov7725_tft_640x480.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc D:/myapp/FPGA/pro/1_ebf_xc6slx16_pro_tutorial_code_20220302/51_ov7725_tft/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2 ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc D:/myapp/FPGA/pro/1_ebf_xc6slx16_pro_tutorial_code_20220302/51_ov7725_tft/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2 ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ngd ov7725_tft_640x480.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc D:/myapp/FPGA/pro/1_ebf_xc6slx16_pro_tutorial_code_20220302/51_ov7725_tft/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2 ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ngd ov7725_tft_640x480.pcf 
+par -w -intstyle ise -ol high -mt off ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ncd ov7725_tft_640x480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov7725_tft_640x480.twx ov7725_tft_640x480.ncd -o ov7725_tft_640x480.twr ov7725_tft_640x480.pcf 
+bitgen -intstyle ise -f ov7725_tft_640x480.ut ov7725_tft_640x480.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../rtl/ddr3/axi_ddr_fifo -nt timestamp -uc D:/myProject/FPGA/51_ov7725_tft_640x480/rtl/ov7725_tft.ucf -p xc6slx16-csg324-2 ov7725_tft_640x480.ngc ov7725_tft_640x480.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ngd ov7725_tft_640x480.pcf 
+par -w -intstyle ise -ol high -mt off ov7725_tft_640x480_map.ncd ov7725_tft_640x480.ncd ov7725_tft_640x480.pcf 
+bitgen -intstyle ise -f ov7725_tft_640x480.ut ov7725_tft_640x480.ncd 
